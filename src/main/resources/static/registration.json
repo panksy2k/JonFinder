@@ -1,0 +1,13 @@
+{
+  "currentCompensation": 100,
+  "education": "A_LEVEL",
+  "emailAddress": "pankaj.d.p@gmail.com",
+  "employmentType": "CONTRACT",
+  "name": {
+    "firstName": "P",
+    "lastName": "Pardasani"
+  },
+  "password": "pas23",
+  "terms": "GDPR",
+  "workEligibility": "IN_UK"
+}
