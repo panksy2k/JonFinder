@@ -131,17 +131,9 @@
 							</healthcheck>-->
 							<run>
 								<ports>
-									<port>127.0.0.1:80:80</port>
+									<port>127.0.0.1:8080:8080</port>
 								</ports>
-								<entrypoint>
-									<exec>
-										<arg>java</arg>
-										<arg>-jar</arg>
-										<arg>maven/${project.name}-${project.version}.jar</arg>
-										<arg>-e</arg>
-										<arg>"SPRING_PROFILES_ACTIVE=prod"</arg>
-									</exec>
-								</entrypoint>
+								<cmd>java -jar -Dspring.profiles.active=prod maven/${project.name}-${project.version}.jar</cmd>
 							</run>
 						</image>
 					</images>
