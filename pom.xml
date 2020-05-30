@@ -96,7 +96,57 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.20.1</version>
+				<configuration>
+					<images>
+						<image>
+							<name>jobfinder:${project.version}</name>
+							<alias>JobFinderAPI</alias>
+							<build>
+								<from>azul/zulu-openjdk-alpine:13</from>
+								<maintainer>pankaj.d.p@gmail.com Pankaj Pardasani</maintainer>
+								<tags>
+									<tag>latest</tag>
+									<tag>${project.version}</tag>
+								</tags>
+								<ports>
+									<port>8080</port>
+								</ports>
+								<volumes>
+									<volume>/var/jobfinder</volume>
+								</volumes>
+								<assembly>
+									<descriptorRef>artifact</descriptorRef>
+								</assembly>
+							</build>
+							<!--<healthcheck>
+								<interval>5m</interval>
+								<timeout>3s</timeout>
+								<startPeriod>10s</startPeriod>
+								<retries>3</retries>
+								<cmd>curl -f http://localhost:8080/swagger-ui.html || exit 1</cmd>
+							</healthcheck>-->
+							<run>
+								<ports>
+									<port>127.0.0.1:80:80</port>
+								</ports>
+								<entrypoint>
+									<exec>
+										<arg>java</arg>
+										<arg>-jar</arg>
+										<arg>maven/${project.name}-${project.version}.jar</arg>
+										<arg>-e</arg>
+										<arg>"SPRING_PROFILES_ACTIVE=prod"</arg>
+									</exec>
+								</entrypoint>
+							</run>
+						</image>
+					</images>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>
