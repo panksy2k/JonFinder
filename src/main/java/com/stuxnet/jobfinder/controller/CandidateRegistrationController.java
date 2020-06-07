@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.lang.invoke.MethodHandles;
+import java.util.Random;
 
 @Api(value = "REST Api for registering the candidate information")
 @RestController
@@ -26,8 +27,8 @@ public class CandidateRegistrationController {
     })
     @PostMapping(path = "/register", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Long> registerCandidate(@ApiParam(required = true, type = "CandidateRegistration.class") @RequestBody CandidateRegistration candidate) {
+    public ResponseEntity<Integer> registerCandidate(@ApiParam(required = true, type = "CandidateRegistration.class") @RequestBody CandidateRegistration candidate) {
         log.info("Registering the candidate from {}", candidate.toString());
-        return ResponseEntity.ok(1L);
+        return ResponseEntity.ok(new Random().nextInt(100));
     }
 }

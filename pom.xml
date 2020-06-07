@@ -132,6 +132,10 @@
                                 <ports>
                                     <port>127.0.0.1:8080:8080</port>
                                 </ports>
+                                <restartPolicy>
+                                    <name>on-failure</name>
+                                    <retry>3</retry>
+                                </restartPolicy>
                                 <cmd>java -jar -Dspring.profiles.active=prod
                                     maven/${project.name}-${project.version}.jar
                                 </cmd>
