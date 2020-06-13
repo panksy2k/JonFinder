@@ -3,6 +3,7 @@ Services that could be used for managing the jobs inside the application
 How to run the application
 =========================
 
+=
 Build - create docker image from the artifact created at the same time
 mvn clean package docker:build
 
