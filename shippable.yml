@@ -24,8 +24,6 @@ matrix:
 build:
 
   pre_ci:
-    - sdk install maven
-    - mvn clean package docker:build
 
   pre_ci_boot:
     image_name: azul/zulu-openjdk-alpine
@@ -34,7 +32,9 @@ build:
     options:
 
   ci:
+    - mvn clean package docker:build
     - mvn docker:run
+
   post_ci:
   on_success:
     - git push https://git.heroku.com/mysterious-basin-34361.git
