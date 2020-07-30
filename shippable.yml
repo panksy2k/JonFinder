@@ -42,9 +42,3 @@ build:
   cache:
   cache_dir_list:
   push:
-
-integrations:
-  notifications:
-    - integrationName:
-      type:
-      recipients:
