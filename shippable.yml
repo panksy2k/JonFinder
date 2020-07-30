@@ -24,6 +24,7 @@ matrix:
 build:
 
   pre_ci:
+    - sdk use maven 3.6.3
     - mvn clean package docker:build
 
   pre_ci_boot:
