@@ -48,8 +48,3 @@ integrations:
     - integrationName:
       type:
       recipients:
-
-    hub:
-      - integrationName:
-        type:
-        agent_only:
