@@ -1,9 +1,8 @@
 Services that could be used for managing the jobs inside the application
 
 How to run the application
-=========================
+==========================
 
-=
 Build - create docker image from the artifact created at the same time
 mvn clean package docker:build
 
@@ -20,5 +19,8 @@ mvn docker:run
 
 Maven Plugins used for Docker 
 docker-maven-plugin in io.fabric8 - http://dmp.fabric8.io/#start-logging
+
+Run a sample request using http client
+$ http POST http://localhost:8080/register < src/main/resources/static/registration.json
 
 

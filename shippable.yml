@@ -1,0 +1,72 @@
+language: java
+
+jdk:
+  # Optional: select the node pool or node pools you want to run this job on,if different from default
+runtime:
+
+services:
+  - #any supported service
+
+depth: #postive integer
+
+gitConfig:
+  - #git config 1
+  - #git config 2
+
+vote:
+  on_success:
+    Verified: 1
+    Code-Review: 2
+  on_failure:
+    Verified: -1
+    Code-Review: -2
+
+env:
+  - #env1=foo
+  - #env2=bar
+
+matrix:
+
+build:
+
+  pre_ci:
+    - mvn clean package docker:build
+
+  pre_ci_boot:
+    image_name: azul/zulu-openjdk-alpine
+    image_tag:  13
+    pull: true
+    options:
+
+  ci:
+    - mvn docker:run
+   post_ci:
+    - #command1
+    - #command2
+  on_success:
+    - git push https://git.heroku.com/mysterious-basin-34361.git
+    - #command2
+  on_failure:
+    - #command1
+    - #command2
+  always:
+    - #command1
+    - #command2
+  cache:
+  cache_dir_list:
+    - #dir1
+  push:
+    - #command1
+
+integrations:
+  notifications:
+    - integrationName:
+      type:
+      recipients:
+        - #recp1
+        - #recp2
+
+    hub:
+      - integrationName:
+        type:
+        agent_only:
