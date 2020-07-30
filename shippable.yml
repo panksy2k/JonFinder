@@ -34,8 +34,7 @@ build:
 
   ci:
     - mvn docker:run
-
-   post_ci:
+  post_ci:
   on_success:
     - git push https://git.heroku.com/mysterious-basin-34361.git
   on_failure:
