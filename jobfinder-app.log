@@ -1,0 +1,50 @@
+2020-08-01 20:35:30.342  INFO 91350 --- [main] c.s.j.JobFinderApiApplicationTests       : Starting JobFinderApiApplicationTests on Pankajs-MBP-2 with PID 91350 (started by pankajpardasani in /Users/pankajpardasani/Projects/Job/jobfinder)
+2020-08-01 20:35:30.343  INFO 91350 --- [main] c.s.j.JobFinderApiApplicationTests       : No active profile set, falling back to default profiles: default
+2020-08-01 20:35:31.832  INFO 91350 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-01 20:35:31.934  INFO 91350 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-01 20:35:32.114  INFO 91350 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 20:35:32.449  INFO 91350 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-08-01 20:35:32.472  INFO 91350 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-08-01 20:35:32.491  INFO 91350 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-08-01 20:35:32.588  INFO 91350 --- [main] c.s.j.JobFinderApiApplicationTests       : Started JobFinderApiApplicationTests in 2.467 seconds (JVM running for 3.172)
+2020-08-01 20:35:32.936  INFO 91350 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-01 20:36:51.554  INFO 91397 --- [main] c.s.j.JobFinderApiApplicationTests       : Starting JobFinderApiApplicationTests on Pankajs-MBP-2 with PID 91397 (started by pankajpardasani in /Users/pankajpardasani/Projects/Job/jobfinder)
+2020-08-01 20:36:51.556  INFO 91397 --- [main] c.s.j.JobFinderApiApplicationTests       : No active profile set, falling back to default profiles: default
+2020-08-01 20:36:53.201  INFO 91397 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-01 20:36:53.321  INFO 91397 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-01 20:36:53.534  INFO 91397 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 20:36:53.857  INFO 91397 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-08-01 20:36:53.889  INFO 91397 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-08-01 20:36:53.913  INFO 91397 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-08-01 20:36:54.032  INFO 91397 --- [main] c.s.j.JobFinderApiApplicationTests       : Started JobFinderApiApplicationTests in 2.713 seconds (JVM running for 3.458)
+2020-08-01 20:36:54.456  INFO 91397 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-01 20:48:17.721  INFO 91526 --- [main] c.s.j.JobFinderApiApplicationTests       : Starting JobFinderApiApplicationTests on Pankajs-MBP-2 with PID 91526 (started by pankajpardasani in /Users/pankajpardasani/Projects/Job/jobfinder)
+2020-08-01 20:48:17.722  INFO 91526 --- [main] c.s.j.JobFinderApiApplicationTests       : No active profile set, falling back to default profiles: default
+2020-08-01 20:48:19.316  INFO 91526 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-01 20:48:19.432  INFO 91526 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-01 20:48:19.628  INFO 91526 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 20:48:19.959  INFO 91526 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-08-01 20:48:19.988  INFO 91526 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-08-01 20:48:20.013  INFO 91526 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-08-01 20:48:20.143  INFO 91526 --- [main] c.s.j.JobFinderApiApplicationTests       : Started JobFinderApiApplicationTests in 2.666 seconds (JVM running for 3.334)
+2020-08-01 20:48:20.583  INFO 91526 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-01 20:59:34.565  INFO 91645 --- [main] c.s.j.JobFinderApiApplicationTests       : Starting JobFinderApiApplicationTests on Pankajs-MBP-2 with PID 91645 (started by pankajpardasani in /Users/pankajpardasani/Projects/Job/jobfinder)
+2020-08-01 20:59:34.566  INFO 91645 --- [main] c.s.j.JobFinderApiApplicationTests       : No active profile set, falling back to default profiles: default
+2020-08-01 20:59:36.066  INFO 91645 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-01 20:59:36.169  INFO 91645 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-01 20:59:36.336  INFO 91645 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 20:59:36.639  INFO 91645 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-08-01 20:59:36.652  INFO 91645 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-08-01 20:59:36.671  INFO 91645 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-08-01 20:59:36.765  INFO 91645 --- [main] c.s.j.JobFinderApiApplicationTests       : Started JobFinderApiApplicationTests in 2.413 seconds (JVM running for 3.057)
+2020-08-01 20:59:37.128  INFO 91645 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-01 21:43:54.900  INFO 92045 --- [main] c.s.j.JobFinderApiApplicationTests       : Starting JobFinderApiApplicationTests on Pankajs-MBP-2 with PID 92045 (started by pankajpardasani in /Users/pankajpardasani/Projects/Job/jobfinder)
+2020-08-01 21:43:54.901  INFO 92045 --- [main] c.s.j.JobFinderApiApplicationTests       : No active profile set, falling back to default profiles: default
+2020-08-01 21:43:56.613  INFO 92045 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-01 21:43:56.719  INFO 92045 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-01 21:43:56.911  INFO 92045 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 21:43:57.186  INFO 92045 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-08-01 21:43:57.203  INFO 92045 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-08-01 21:43:57.223  INFO 92045 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-08-01 21:43:57.338  INFO 92045 --- [main] c.s.j.JobFinderApiApplicationTests       : Started JobFinderApiApplicationTests in 2.683 seconds (JVM running for 3.445)
+2020-08-01 21:43:57.770  INFO 92045 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

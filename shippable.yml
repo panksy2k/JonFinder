@@ -1,40 +1,21 @@
-resources:
-  - name: "jobfinder-github-repo"
-    type: gitRepo
-    integration:  jobfinder-github-shippable-integration
-    versionTemplate:
-      sourceName: "panksy2k/JobFinder"
-      branch: master
-      buildOnCommit:  true
+language: java
+jdk:
+  - openjdk11
+branches:
+  only:
+    - master
+build:
+  ci:
+    - mvn clean package docker:build
+  on_success:
 
-  - name: "build-jobfinder-image-dockerhub-repo"
-    type: image
-    integration:  jobfinder-dockerhub-shippable-integration
-    versionTemplate:
-      sourceName: "panksy2k/jobfinder"
-      versionName:  latest
-jobs:
-  - name: build_custom_img
-    type: runSh
-    steps:
-      - IN: jobfinder-github-repo
-      - TASK:
-          name: build_jobfinder_docker_image
-          script:
-            - pushd $(shipctl get_resource_state "jobfinder-github-repo")
-              # Extract image information and Docker registry credentials from resources using shipctl utility
-              # Detailed shipctl guide is at http://docs.shippable.com/platform/tutorial/workflow/using-shipctl/
-            - export IMG_NAME=$(shipctl get_resource_version_key build-jobfinder-image-dockerhub-repo "jobfinder")
-            - export DH_USR_NAME=$(shipctl get_integration_resource_field build-jobfinder-image-dockerhub-repo "panksy2k")
-            - export DH_PASS=$(shipctl get_integration_resource_field build-jobfinder-image-dockerhub-repo "Ilrtsxypp78")
-            - export DH_URL=$(shipctl get_integration_resource_field build-jobfinder-image-dockerhub-repo "https://hub.docker.com/repository/docker/panksy2k/jobfinder")
-            # Docker commands to build and push to registry
-            - sudo mvn clean package docker:build
-            - sudo docker login -u $DH_USR_NAME -p $DH_PASS
-            - sudo docker push $IMG_NAME:$BUILD_NUMBER
-            - popd
-        - OUT: build-jobfinder-image-dockerhub-repo
-    on_success:
-      script:
-        # Update OUT resource to create a new version that will trigger rest of the workflow
-        - shipctl put_resource_state_multi build_custom_ci_img "versionName=$BUILD_NUMBER"
+  post_ci:
+    - if [ "$BRANCH" == "master" ]; then docker image push panksy2k/jobfinder:latest; fi
+
+integrations:
+  hub:
+    - integrationName: jobfinder-docker-registry
+      type: dockerRegistryLogin
+      branches:
+        only:
+          - master
