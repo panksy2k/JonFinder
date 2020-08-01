@@ -10,7 +10,7 @@ build:
   on_success:
 
   post_ci:
-    - if [ "$BRANCH" == "master" ]; then docker image push panksy2k/jobfinder:latest; fi
+    - if [ "$BRANCH" == "master" ]; then docker image tag jobfinder panksy2k/jobfinder:latest && docker image push panksy2k/jobfinder:latest; fi
 
 integrations:
   hub:
