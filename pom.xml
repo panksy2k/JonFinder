@@ -101,12 +101,6 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.20.1</version>
                 <configuration>
-                    <authConfig>
-                        <push>
-                            <username>panksy2k</username>
-                            <password>Ilrtsxypp78</password>
-                        </push>
-                    </authConfig>
                     <images>
                         <image>
                             <name>jobfinder:${project.version}</name>
