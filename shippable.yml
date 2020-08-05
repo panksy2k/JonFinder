@@ -18,7 +18,7 @@ build:
     #- git push -f git@heroku.com:$HEROKU_APP_NAME.git master
 
   post_ci:
-    - docker login --username=$HEROKU_USERNAME --password=$HEROKU_API_KEY $HEROKU_REGISTRY_DOCKER
+    - docker login --username=$HEROKU_USERNAME --password=$(heroku auth:token) $HEROKU_REGISTRY_DOCKER
     - if [ "$BRANCH" == "master" ]; then docker image tag jobfinder $HEROKU_REGISTRY_DOCKER/jobfinder:latest && docker image push $HEROKU_REGISTRY_DOCKER/jobfinder:latest; fi
     - heroku container:release web
 
