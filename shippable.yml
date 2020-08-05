@@ -4,10 +4,15 @@ jdk:
 branches:
   only:
     - master
+
+env:
+  global:
+    - HEROKU_APP_NAME=stuxnet-jobfinder
 build:
   ci:
     - mvn clean package docker:build
   on_success:
+    - git push -f git@heroku.com:$HEROKU_APP_NAME.git master
 
   post_ci:
     - if [ "$BRANCH" == "master" ]; then docker image tag jobfinder panksy2k/jobfinder:latest && docker image push panksy2k/jobfinder:latest; fi
