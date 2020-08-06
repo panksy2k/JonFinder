@@ -25,7 +25,7 @@ build:
   post_ci:
     - docker login --username=$HEROKU_USERNAME --password=097a35d5-8eb6-4e1b-aca4-244fbd6f3444 $HEROKU_REGISTRY_DOCKER
     - if [ "$BRANCH" == "master" ]; then docker image tag $DOCKER_IMAGE_NAME $HEROKU_REGISTRY_DOCKER/$HEROKU_APP_NAME/web && docker image push $HEROKU_REGISTRY_DOCKER/$HEROKU_APP_NAME/web; fi
-    - heroku container:release --app=$HEROKU_APP_NAME
+    - heroku container:release web --app=$HEROKU_APP_NAME
 
 integrations:
   hub:
