@@ -9,8 +9,8 @@ env:
   global:
     - HEROKU_APP_NAME=stuxnet-jobfinder
     - HEROKU_USERNAME=pankaj.d.p@gmail.com
-    - HEROKU_API_KEY=a0f1e911-26f0-4f45-8078-345ec23f46ea
     - HEROKU_REGISTRY_DOCKER=registry.heroku.com
+    - DOCKER_IMAGE_NAME=jobfinder:latest
 build:
   ci:
     - mvn clean package docker:build
@@ -19,7 +19,7 @@ build:
 
   post_ci:
     - docker login --username=$HEROKU_USERNAME --password=$(heroku auth:token) $HEROKU_REGISTRY_DOCKER
-    - if [ "$BRANCH" == "master" ]; then docker image tag jobfinder $HEROKU_REGISTRY_DOCKER/jobfinder:latest && docker image push $HEROKU_REGISTRY_DOCKER/jobfinder:latest; fi
+    - if [ "$BRANCH" == "master" ]; then docker image tag $DOCKER_IMAGE_NAME $HEROKU_REGISTRY_DOCKER/$HEROKU_APP_NAME/web && docker image push $HEROKU_REGISTRY_DOCKER/$HEROKU_APP_NAME/web; fi
     - heroku container:release web
 
 integrations:
